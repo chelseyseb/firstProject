@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Calculator() {
+export default function Calculator() {
   const styles = {
     calculator: {
       marginTop: "20px",
@@ -58,7 +58,6 @@ function Calculator() {
     return result;
   };
   
-
   const handleClick = (e) => {
     const value = e.target.value;
     switch (value) {
@@ -117,4 +116,4 @@ function Calculator() {
   );
 }
 
-export default Calculator;
+
