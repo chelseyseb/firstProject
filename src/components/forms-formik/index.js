@@ -110,6 +110,9 @@ const FormsFormik = () => {
         .required("Day is required"),
     year: Yup.string()
         .required("Year is required"),
+        gender: Yup.string()
+        .required("Gender is required"),
+
   });
 
   const months = [
@@ -259,6 +262,7 @@ const FormsFormik = () => {
                 Custom
                 <Field type="radio" name="gender" id="custom" value="custom" />
                 </label>
+                <ErrorMessage name="gender" />
                 </div>
             </div>
         </div>
