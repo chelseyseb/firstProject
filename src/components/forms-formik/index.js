@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const styles = {
     container: {
@@ -88,9 +89,47 @@ const styles = {
         backgroundColor: "green",
         borderRadius: "5px",
     },
-  }
+  }  
+
+  
+
+  // const patchPosts = (passValue) => {
+  //   console.log("passValue == ", passValue);
+  //   axios
+  //     .patch(`${api}/posts/1`, {
+  //       id	: passValue?.id,
+  //       firstName: passValue?.firstName,
+  //       lastName: passValue?.lastName,
+  //       emailNum: passValue?.emailNum,
+  //       password: passValue?.password,
+  //       month: passValue?.month,
+  //       day: passValue?.day,
+  //       year: passValue?.year,
+  //       gender: passValue?.gender,
+  //       pronoun: passValue?.pronoun,
+  //       customGender: passValue?.customGender,
+  //       // body: passValue?.body, --> include one key only for PUT
+  //     })
+  //     .then(function (response) {
+  //       setPatchStatus(response?.status);
+  //     });
+  // };
+
+  // const deletePosts = (passValue) => {
+  //   axios.delete(`${api}/posts/${passValue?.id}`).then(function (response) {
+  //     setDeleteStatus(response?.status);
+  //   });
+  // };
+
 
 const FormsFormik = () => {
+    const api = "https://api.ahglab.com/api:W7k9W8HQ/users";
+    const [data, setData] = useState();
+    const [postStatus, setPostStatus] = useState();
+    const [patchStatus, setPatchStatus] = useState();
+    const [deleteStatus, setDeleteStatus] = useState();
+
+    
   const SignupSchema = Yup.object().shape({
     firstName: Yup.string()
       .min(2, "Too Short!")
@@ -103,6 +142,8 @@ const FormsFormik = () => {
     emailNum: Yup.string()
         .required("Email is Required"),
     password: Yup.string()
+        .min(8, "Too Short!")
+        .max(50, "Too Long!")
         .required("Password is Required"),
     month: Yup.string()
         .required("Month is required"),
@@ -110,10 +151,15 @@ const FormsFormik = () => {
         .required("Day is required"),
     year: Yup.string()
         .required("Year is required"),
-        gender: Yup.string()
+    gender: Yup.string()
         .required("Gender is required"),
-
   });
+
+  const pronoun = [
+    { value: "She", label: "She: 'We wish her a happy birthday!'"},
+    { value: "He", label: "He: 'We wish him a happy birthday!'"},
+    { value: "They", label: "They: 'We wish them a happy birthday!'"},
+  ];
 
   const months = [
     { value: "01", label: "January" },
@@ -145,45 +191,104 @@ const FormsFormik = () => {
   
 
   const [display, setDisplay] = useState();
+      
+    const getPosts = () => {
+          axios.get(`${api}`).then(function (response) {
+            setData(response?.data);
+          });
+        };
+        useEffect(() => {
+            getPosts();
+          }, []);
+          console.log(data)
 
-  return (
-    <div className="screen" style={styles.container}>
-      <Formik
-        initialValues={{
-          firstName: "",
-          lastName: "",
-          emailNum: "",
-          password: "",
-          month: "",
-          day: "",
-          year: "",
-          gender: "",
-          pronoun: "",
-          customGender: "",
-        }}
-        validationSchema={SignupSchema}
-        onSubmit={(values, actions) => {
-          setDisplay(
-          `Name: ${values.firstName} ${values.lastName} Email/Number: ${values.emailNum} Password: ${values.password} Birthday: ${values.month}/${values.day}/${values.year} \n Gender: ${values.gender } ${values.pronoun} ${values.customGender}`
-            );
-            actions.resetForm({
-              values:{
-                firstName: "",
-                lastName: "",
-                emailNum: "",
-                password: "",
-                month: "",
-                day: "",
-                year: "",
-                gender: "",
-                pronoun: "",
-                customGender: "",
-              },
-            })
-        }}
-        // add reset
-        
-      >
+        const postPosts = (passValue) => {
+            console.log("passValue == ", passValue);
+            axios
+              .post(`${api}`, {
+                id	: passValue?.id,
+                firstName: passValue?.firstName,
+                lastName: passValue?.lastName,
+                emailNum: passValue?.emailNum,
+                password: passValue?.password,
+                month: passValue?.month,
+                day: passValue?.day,
+                year: passValue?.year,
+                gender: passValue?.gender,
+                customGender: passValue?.customGender,
+                pronoun: passValue?.pronoun,
+              })
+              .then(function (response) {
+                setPostStatus(response?.status);
+                // console.log(response);
+              });
+
+                // const patchPosts = (passValue) => {
+                //   console.log("passValue == ", passValue);
+                //   axios
+                //     .patch(`${api}/posts/1`, {
+                //       id	: passValue?.id,
+                //       firstName: passValue?.firstName,
+                //       lastName: passValue?.lastName,
+                //       emailNum: passValue?.emailNum,
+                //       password: passValue?.password,
+                //       month: passValue?.month,
+                //       day: passValue?.day,
+                //       year: passValue?.year,
+                //       gender: passValue?.gender,
+                //       pronoun: passValue?.pronoun,
+                //       customGender: passValue?.customGender,
+                //       // body: passValue?.body, --> include one key only for PUT
+                //     })
+                //     .then(function (response) {
+                //       setPatchStatus(response?.status);
+                //     });
+                // };
+
+                // const deletePosts = (passValue) => {
+                //   axios.delete(`${api}/posts/${passValue?.id}`).then(function (response) {
+                //     setDeleteStatus(response?.status);
+                //   });
+                // };
+          };
+          
+          return (
+            <div className="screen" style={styles.container}>
+              <Formik
+                initialValues={{
+                  firstName: "",
+                  lastName: "",
+                  emailNum: "",
+                  password: "",
+                  month: "",
+                  day: "",
+                  year: "",
+                  gender: "",
+                  pronoun: "",
+                  customGender: "",
+                }}
+                validationSchema={SignupSchema}
+                onSubmit={(values, actions) => {
+                  postPosts(values);
+                  setDisplay(
+                  `Name: ${values.firstName} ${values.lastName} Email/Number: ${values.emailNum} Password: ${values.password} Birthday: ${values.month}/${values.day}/${values.year} \n Gender: ${values.gender } ${values.pronoun} ${values.customGender}`
+                    );
+                    actions.resetForm({
+                      values:{
+                        firstName: "",
+                        lastName: "",
+                        emailNum: "",
+                        password: "",
+                        month: "",
+                        day: "",
+                        year: "",
+                        gender: "",
+                        pronoun: "",
+                        customGender: "",
+                      },
+                    })
+                }}        
+              >
         {({ errors, touched, values }) => (
             <Form>
             <div style={{ display: "flex", flexDirection: "row" }}>
@@ -268,8 +373,15 @@ const FormsFormik = () => {
         </div>
                 {values?.gender == "custom" && (
                 <div>
-                    <Field style={styles.input} id="pronoun" name="pronoun" placeholder="Select your pronoun"/>
-                  
+                    <Field style={styles.input} as="select" id="pronoun" name="pronoun" placeholder="Select your pronoun" >
+                    <option value="">Select your pronoun</option>
+                    {pronoun.map((pronoun) => (
+                    <option key={pronoun.value} value={pronoun.value}>
+                        {pronoun.label}
+                    </option>
+                    ))}
+                    </Field>
+                    <ErrorMessage name="pronoun" />
                     <Field style={styles.input} id="customGender" name="customGender" placeholder="Gender (optional)" />
                     
                 </div>
@@ -281,6 +393,25 @@ const FormsFormik = () => {
             <button style={styles.signUpButton} type="submit">Sign Up</button>
             <br></br>
             <p style={styles.p}>{display}</p>
+            <p>
+                Status:{" "}
+                {postStatus === 200 ? (
+                  <span style={{ color: "green" }}>Success</span>
+                ) : postStatus === 500 ? (
+                  <span style={{ color: "red" }}>Failed</span>
+                ) : (
+                  "N/A"
+                )}
+              </p>
+              <p>GET</p>
+                {/* {data &&
+                  data.splice(0, 10).map((value, key) => {
+                    return (
+                      // <p>
+                      //   {key}: {value?.firstName}
+                      // </p>
+                    );
+                  })} */}
             </Form>
         )}
       </Formik>
