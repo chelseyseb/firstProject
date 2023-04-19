@@ -8,11 +8,13 @@ const styles = {
     },
 
     h2: {
-        marginLeft: "10px"
+        marginLeft: "10px",
+        fontFamily: "SFProDisplay-Bold, Helvetica, Arial, sans-serif",
     },
 
     p: {
-        marginLeft: "10px"
+        marginLeft: "10px",
+        fontFamily: "SFProText-Regular, Helvetica, Arial, sans-serif",
     },
     container: {
         backgroundColor: "whitesmoke",

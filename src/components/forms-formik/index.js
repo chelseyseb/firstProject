@@ -13,6 +13,8 @@ const styles = {
 
     label: {
         padding: "5px",
+        fontSize: "12px",
+        fontFamily:"SFProText-Medium, Helvetica, Arial, sans-serif",
     },
 
     radioLabel: {
@@ -26,6 +28,7 @@ const styles = {
       color: "#1c1e21",
       display: "inline-block",
       fontSize: "15px",
+      fontFamily: "SFProDisplay-Regular, Helvetica, Arial, sans-serif",
       lineHeight: "36px",
       padding: "0 28px 0 10px",
       width: "100%",
@@ -53,6 +56,7 @@ const styles = {
     input: {
       width: "100%",
       height: "40px",
+      fontFamily: "SFProDisplay-Regular, Helvetica, Arial, sans-serif",
       fontSize: "18px",
       padding: "5px",
       margin: "5px",
@@ -61,19 +65,22 @@ const styles = {
       backgroundColor: "lightgray",
     },
     p: {
-        fontSize: "12px",
+        fontSize: "10px",
         paddingLeft: "7px",
+        fontFamily: "SFProDisplay-Regular, Helvetica, Arial, sans-serif",
     },
     p2: {
-        fontSize: "12px",
+        fontSize: "10px",
         paddingLeft: "7px",
         paddingTop: "5px",
         paddingBottom: "10px",
+        fontFamily: "SFProDisplay-Regular, Helvetica, Arial, sans-serif",
     },
     signUpButton: {
         width: "40%",
         height: "40px",
         fontSize: "14px",
+        fontFamily: "SFProDisplay-Regular, Helvetica, Arial, sans-serif",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -154,7 +161,7 @@ const FormsFormik = () => {
         validationSchema={SignupSchema}
         onSubmit={(values, actions) => {
           setDisplay(
-          `Name: ${values.firstName} ${values.lastName} Email: ${values.emailNum} Password: ${values.password} Birthday: ${values.month}/${values.day}/${values.year} \n Gender: ${values.gender } ${values.pronoun} ${values.customGender}`
+          `Name: ${values.firstName} ${values.lastName} Email/Number: ${values.emailNum} Password: ${values.password} Birthday: ${values.month}/${values.day}/${values.year} \n Gender: ${values.gender } ${values.pronoun} ${values.customGender}`
             );
             actions.resetForm({
               values:{
