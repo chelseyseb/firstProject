@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Diplomata } from "next/font/google";
 
 const styles = {
     container: {
@@ -47,6 +46,7 @@ const styles = {
 
     radioButton: {
         border: "2px",
+        appearance: "auto",
         borderRadius: "5px",
     },
     
@@ -61,11 +61,11 @@ const styles = {
       backgroundColor: "lightgray",
     },
     p: {
-        fontSize: "10px",
+        fontSize: "12px",
         paddingLeft: "7px",
     },
     p2: {
-        fontSize: "10px",
+        fontSize: "12px",
         paddingLeft: "7px",
         paddingTop: "5px",
         paddingBottom: "10px",
@@ -267,9 +267,9 @@ const FormsFormik = () => {
 
             <p style={styles.p}>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
             <p style={styles.p2}>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time</p>
-            
             <button style={styles.signUpButton} type="submit">Sign Up</button>
-            <p>{display}</p>
+            <br></br>
+            <p style={styles.p}>{display}</p>
             </Form>
         )}
       </Formik>
