@@ -198,7 +198,7 @@ const FormsFormik = () => {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column" }}>
-                <Field style={styles.input} id="emailNum" name="emailNum" placeholder="Mobile number or email" />
+                <Field style={styles.input} type="email" id="emailNum" name="emailNum" placeholder="Mobile number or email" />
                 <ErrorMessage name="emailNum" />
                 <Field style={styles.input} type="password" id="password" name="password" placeholder="New password" />
                 <ErrorMessage name="password" /> 
