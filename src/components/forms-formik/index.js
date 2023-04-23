@@ -184,7 +184,7 @@ const FormsFormik = () => {
                 last_name: passValue?.lastName,
                 credentials: passValue?.emailNum,
                 password: passValue?.password,
-                birthdate: `${values?.month}/${values?.day}/${values?.year}`,
+                birthdate: `${passValue?.month}/${passValue?.day}/${passValue?.year}`,
                 gender: passValue?.gender,
                 pronoun: passValue?.pronoun,
               })
