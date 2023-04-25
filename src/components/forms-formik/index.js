@@ -88,6 +88,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         margin: "auto",
+        color: "white",
         backgroundColor: "green",
         borderRadius: "5px",
     },
