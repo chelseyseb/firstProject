@@ -312,7 +312,7 @@ const FormsFormik = () => {
             </Field>
             <ErrorMessage name="year" />
             </div>
-            </div>
+          </div>
 
             <label style={styles.label} htmlFor="gender">Gender </label>
             <div>
@@ -376,6 +376,7 @@ const FormsFormik = () => {
         )}
       </Formik>
       <br></br>
+      
       <div>
       <h3>EDIT</h3>
       <Formik
