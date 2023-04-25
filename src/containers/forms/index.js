@@ -4,7 +4,7 @@ import FormsFormik from "@components/forms-formik";
 const styles = {
     screen: {
         height: "100%",
-        marginTop: "100px",
+        backgroundColor: "white",
     },
 
     h2: {
@@ -18,11 +18,17 @@ const styles = {
     },
     container: {
         backgroundColor: "whitesmoke",
-        width: "30%",
-        height: "100%",
+        width: "450px",
+        height: "auto",
         margin: "auto",
         color: "black",
         borderRadius: "5px",
+        display: "flex",
+        flexDirection: "column",
+        boxShadow: "1px 15px 50px 1px grey",
+        borderRadius: "10px",
+        padding: "15px",
+              
     },
     hr: {
         borderTop: "2px solid #bbb",

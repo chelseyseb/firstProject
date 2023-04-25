@@ -10,6 +10,7 @@ export default function Calculator() {
     
     screen: {
       height: "80px",
+    
     },
     
     buttons: {
@@ -48,6 +49,9 @@ export default function Calculator() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
+ //evaluate the expression from input. This function takes an expression as a string, 
+ //wraps it in a return statement, and creates a new function from it using the Function()
+ //constructor. It then calls this function and returns its result
   const evaluateExpression = (expr) => {
     let result;
     try {

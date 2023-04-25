@@ -8,7 +8,7 @@ const styles = {
         backgroundColor: "whitesmoke",
         display: "flex",
         flexDirection: "column",
-        width: "98%",
+        width: "auto",
         height: "100%",
         borderRadius: "5px",
         paddingBottom: "10px",
