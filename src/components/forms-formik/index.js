@@ -540,7 +540,7 @@ const FormsFormik = () => {
 
       <div>
         <br/>
-        <p>DELETE</p>
+        <h3>DELETE</h3>
         <Formik
           initialValues={{
             id: "",
@@ -572,7 +572,7 @@ const FormsFormik = () => {
         </Formik>
         <br/>
         <div>
-        <p>GET</p>
+        <h3>GET</h3>
         {data && data.map((value, index) => {
             return (
               <p key={index}>
