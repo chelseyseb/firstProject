@@ -1,0 +1,6 @@
+# Ignore artifacts:
+/out
+/.next
+.eslintrc
+.prettierrc
+*.md

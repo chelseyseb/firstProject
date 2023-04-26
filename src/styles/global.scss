@@ -1,0 +1,134 @@
+// 1.yarn add tailwindcss postcss autoprefixer
+// 2. npx tailwindcss init
+// 3. add the ff in the global style
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+// 4.   mode: "jit",
+//      content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
+// 5. create a postcss.config.js and copy content of file
+// 6. add prettier and headwind
+@import "./colors.scss";
+
+p {
+  color: $red;
+}
+
+span {
+  font-family: Cinzel,Arial,Helvetica,sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  color: #800;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+
+.icon-effect-2 {
+  height: auto;
+  color: #800;
+  box-shadow: 0 0 0 50px #800;
+  -o-box-shadow: 0 0 0 3px #800;
+  -moz-box-shadow: 0 0 0 3px #800;
+  -webkit-box-shadow: 0 0 0 3px #800;
+  border-radius: 50%;
+}
+
+.icon-medium-effect {
+  position: relative;
+  display: block;
+  z-index: 1;
+  font-size: 2em;
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  margin: 0;
+  
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding-top: 300px;
+  // margin-right: auto;
+  // margin-left: auto;
+}
+
+.content {
+  padding-top: 300px;
+  // margin-right: auto;
+  // margin-left: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  color: #800;
+}
+
+h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.page-content {
+  width: 750px;
+}
+
+footer{
+  background-color: #eee;
+    width: auto;
+    /* border-top: 4px solid #aaa; */
+    color: #555;
+}
+
+.footer-widget h4 {
+  color: #800;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+}
+
+.footer-widget li {
+  margin: 10px 0;
+  font-size: 10px;
+}
+
+.slider-container {
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: inherit;
+}
+.carousel {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+}
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+.carousel-item.active {
+  opacity: 1;
+  z-index: 0;
+}
