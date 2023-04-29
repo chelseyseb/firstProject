@@ -3,6 +3,7 @@ import Title from '@components/title'
 import { useState } from 'react'
 import NavTop from '@components/navbar'
 import Homepage from '@containers/home'
+import Footer from '@components/footer'
 import { Inter } from 'next/font/google'
 
 
@@ -13,6 +14,7 @@ const HomepageContainer = () => {
     <>
     <NavTop/>
     <Homepage />
+    <Footer />
     </>
   )
   
