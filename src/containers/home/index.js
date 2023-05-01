@@ -27,10 +27,10 @@ const HomeContainer = () => {
       setCurrentImageIndex((currentSlide - 1 + totalSlides) % totalSlides);
     }
   return (
-      <div className='container mx-auto'>
+      <div className='mx-auto '>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
-            <div className="items-center justify-center mx-auto carousel HomeContainer">
+            <div className="items-center justify-center carousel HomeContainer">
               
               <div className="left-0 right-0 top-auto flex justify-between mt-4 transform -translate-y-1/2">
                 <img src="pup.jpg" className={`w-full carousel-item ${currentSlide === 0 ? 'active' : ''}`} />
@@ -42,14 +42,14 @@ const HomeContainer = () => {
                 <img src="6th.jpg" className={`w-full  carousel-item ${currentSlide === 6 ? 'active' : ''}`} />
                 <img src="7th.jpg" className={`w-full  carousel-item ${currentSlide === 7 ? 'active' : ''}`} />
               </div>
-              <div className="static flex justify-between mt-20 transform -translate-y-1/2 md:mt-64 left-5 right-5 top-1/2">
+              <div className="static flex justify-between mt-20 transform -translate-y-1/2 lg:mt-80 left-5 right-5 top-1/2">
                 <button onClick={handlePrev} className="pl-4 arrow h-14 btn ">❮</button> 
                 <button onClick={handleNext} className="pr-4 arrow h-14 btn ">❯</button>  
               </div>
                </div> 
            
             <div className='container mx-auto body '>
-            <div className='grid grid-rows-1 place-self-center md:grid-cols-4 md:grid-row'>
+            <div className='grid grid-rows-1 pt-4 lg:gap-36 gap-14 lg:pt-0 place-self-center lg:grid-cols-4 lg:grid-row'>
                 <div className='grid grid-flow-col grid-rows-2 place-self-center '>
                   <div className='col-span-1'>
                     <PencilSquareIcon className="w-12 h-12 p-2 text-red-800 icon-effect-2 hover:bg-red-800 hover:text-white" />
@@ -99,9 +99,9 @@ const HomeContainer = () => {
             <div className="line">
         </div>
         
-        <div className='container w-full max-w-screen-xl mx-auto body'>
-          <div className='grid grid-cols-1 md:grid-cols-3'>
-            <div className='flex flex-col items-center md:items-start '>
+        <div className='container w-full mx-auto body'>
+          <div className='grid grid-cols-1 lg:grid-cols-3'>
+            <div className='flex flex-col items-center lg:items-start '>
               <h4 >
                 <span>
                   <a className="font-semibold underline underline-offset-8" href='/announcements'>
@@ -167,7 +167,7 @@ const HomeContainer = () => {
                 </ul>
               </div></div>
             
-            <div className='items-center col-span-1 pl-6 md:items-start'>
+            <div className='items-center col-span-1 pl-6 lg:items-start'>
                 <h4 className=''>
                     <span>
                       <a className="font-semibold underline underline-offset-8" href='/announcements'>
@@ -176,7 +176,7 @@ const HomeContainer = () => {
                     </span>
                   </h4>
           </div>
-          <div className='w-7/12 col-span-1 pt-4 place-self-center md:place-self-end'>
+          <div className='w-7/12 col-span-1 pt-4 place-self-center lg:place-self-end'>
             <a className='' href="/goodgovernance/transparency/">
                 <img className="rounded " alt="Philippine Transparency Seal" src="//i.imgur.com/vaNWHC9.jpg"/></a>
             <a className='' href="https://www.foi.gov.ph/requests?agency=PUP" target="_blank">
@@ -193,8 +193,8 @@ const HomeContainer = () => {
         <div className='line'></div>
           <div className='container mx-auto body place-items-center'>
             <div className=' place-items-center'>
-              <div className='grid grid-cols-1 gap-8 pb-2 md:grid-cols-3'>
-              <div className="grid col-span-1 md:place-items-end place-items-center">
+              <div className='grid grid-cols-1 gap-8 pb-2 lg:grid-cols-3'>
+              <div className="grid col-span-1 lg:place-items-end place-items-center">
                       <a  class="twitter-timeline" data-width="350" data-height="885" data-theme="dark" href="https://twitter.com/ThePUPOfficial?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
                   <div className='col-span-2 place-items-start'>
