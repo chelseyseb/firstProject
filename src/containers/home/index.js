@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
-import { PencilSquareIcon } from '@heroicons/react/24/outline'
-import { StarIcon } from '@heroicons/react/24/outline'
-import { CubeIcon } from '@heroicons/react/24/outline'
-import { BuildingLibraryIcon } from '@heroicons/react/24/outline'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { news, icons, announcements, badges } from '@helpers/body_data'
-import { icon } from '@fortawesome/fontawesome-svg-core'
+
 
 const HomeContainer = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
