@@ -141,21 +141,20 @@ span {
 
 
 .arrow {
-  position: sticky;
-  left: 0px;
-  top: 0px;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 30px;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   text-align: center;
   background: #fff;
   background: rgba(0,0,0,0.15);
   z-index: 2;
-  line-height: 100px;
+  line-height: 50px;
 }
 
 .social-icons {
@@ -267,12 +266,26 @@ footer{
   object-fit: none;
 }
 
+nav{
+  line-height: 20px;
+  font-size: 10px;
+  background-image: url(/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 
 @media (min-width: 350px)  and (max-width: 1280px){
 
-  .nav-bg{
+nav{
     background-color: white;
+    line-height: 20px;
+    font-size: 10px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 
   .nav-con{

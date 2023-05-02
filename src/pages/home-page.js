@@ -6,19 +6,16 @@ import Homepage from '@containers/home'
 import Footer from '@components/footer'
 import { Inter } from 'next/font/google'
 
-
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({ subsets: ['latin'] })
 
 const HomepageContainer = () => {
   return (
     <>
-    <NavTop/>
-    <Homepage />
-    <Footer />
+      <NavTop />
+      <Homepage />
+      <Footer />
     </>
   )
-  
 }
-
 
 export default HomepageContainer
