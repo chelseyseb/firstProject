@@ -135,27 +135,28 @@ export default function footer() {
           </span>
         </div>
 
-        <div class=" bg-neutral-950 dark:bg-neutral-950 lg:flex lg:items-center lg:justify-between">
+        <div class="row bg-neutral-900 dark:bg-neutral-900 lg:flex lg:items-center lg:justify-between">
           <div className="grid grid-cols-1 gap-8 px-4 py-6 text-center nav-con lg:grid-cols-3 lg:text-left">
-            <div className="flex flex-col gap-2 text-center lg:text-left lg:flex-row">
-              <img className="w-24 h-24 place-self-center" src="govph.png" />
-              <a href="#" class="text-neutral-700 pt-5 dark:text-neutral-700 text-xs font-thin hover:underline">
-                Republic of the Philippines <br></br> All content is in the public domain unless otherwise stated.
+            <div className="flex flex-col gap-2 text-center w-72 lg:text-left lg:flex-row">
+              <img className="w-36 h-36 " src="govph.png" />
+              <a href="#" class="text-neutral-700 pt-4 dark:text-neutral-700 text-xs font-semibold">
+                Republic of the Philippines 
+                <p className="pt-2 text-xs font-thin text-neutral-700 dark:text-neutral-700">
+                    All content is in the public domain unless otherwise stated.
+                </p>
               </a>
-              <br></br>
+                
             </div>
 
-            <div>
+            <div className="">
               <h2 class="mb-0 text-xs font-semibold text-neutral-700 uppercase dark:text-neutral-700 text-center lg:text-left">
                 About GOVPH
               </h2>
-              <ul class="text-neutral-700 dark:text-neutral-700 font-medium text-sm ">
-                <li class="mb-0">
-                  <a href="#" class="text-xs font-thin hover:underline">
+                <p class="pt-2 text-neutral-700 dark:text-neutral-700 text-xs font-semibold ">
                     Learn more about the Philippine government, its structure, how government works and the people
                     behind it.
-                  </a>
-                </li>
+                  </p>
+              <ul class="pt-1 text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
                 <li class="mb-0">
                   <a href="#" class="text-xs font-thin hover:underline">
                     Official Gazette
@@ -169,34 +170,44 @@ export default function footer() {
               </ul>
             </div>
 
-            <div>
+            <div className="">
               <h2 class="mb-0 text-xs font-semibold text-neutral-700 uppercase dark:text-neutral-700 text-center lg:text-left">
                 Government Links
               </h2>
-              <ul class="text-neutral-700 dark:text-neutral-700 font-medium text-sm ">
-                <li class="mb-0">
-                  <a href="#" class="text-xs font-thin hover:underline">
+              <ul class="flex flex-col pt-2 text-left  w-72 text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
+                <li class="mb-0 py-0.5">
+                  <a href="#" class=" text-xs font-thin hover:underline">
                     Office of the President
                   </a>
                 </li>
-                <li class="mb-0">
+                <li class="mb-0 py-0.5">
                   <a href="#" class="text-xs font-thin hover:underline">
                     Office of the Vice President
                   </a>
                 </li>
-                <li class="mb-0">
+                <li class="mb-0 py-0.5">
                   <a href="#" class="text-xs font-thin hover:underline">
                     Senate of the Philippines
                   </a>
                 </li>
-                <li class="mb-0">
+                <li class="mb-0 py-0.5">
                   <a href="#" class="text-xs font-thin hover:underline">
                     House of Representatives
                   </a>
                 </li>
-                <li class="mb-0">
+                <li class="mb-0 py-0.5">
                   <a href="#" class="text-xs font-thin hover:underline">
                     Supreme Court
+                  </a>
+                </li>
+                <li class="mb-0 py-0.5">
+                  <a href="#" class="text-xs font-thin hover:underline">
+                  Court of Appeals
+                  </a>
+                </li>
+                <li class="mb-0 py-0.5">
+                  <a href="#" class="text-xs font-thin hover:underline">
+                  Sandiganbayan
                   </a>
                 </li>
               </ul>

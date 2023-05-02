@@ -57,7 +57,7 @@ const HomeContainer = () => {
       </div>
 
       <div className="container mx-auto body">
-        <div className="grid pt-4 grid-col-1 lg:gap-36 gap-14 lg:pt-0 place-self-center lg:grid-cols-4 lg:grid-row">
+        <div className="grid pt-4 grid-col-1 lg:gap-30 gap-14 lg:pt-0 place-self-center lg:grid-cols-4 lg:grid-row">
           {icons.map((icons, index) => (
             <a href={icons.link} key={index}>
               <div className="flex flex-col items-center justify-center h-auto pt-8 lg:flex-wrap lg:flex ">
@@ -182,10 +182,10 @@ const HomeContainer = () => {
               </Carousel>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center col-span-2 gap-1 lg:col-span-1 lg:items-start lg:justify-start">
+          <div className="flex flex-col col-span-2 gap-1 place-self-center lg:col-span-1 lg:place-items-center ">
             {badges.map((badges, index) => (
               <a href="#" key="">
-                <img className="rounded" src={badges.src} alt="" width={200} height={150} />
+                <img className="rounded " src={badges.src} alt="" width={200} height={150} />
               </a>
             ))}
           </div>
