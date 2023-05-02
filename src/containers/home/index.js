@@ -29,7 +29,7 @@ const HomeContainer = () => {
       setCurrentImageIndex((currentSlide - 1 + totalSlides) % totalSlides);
     }
   return (
-      <div className='mx-auto '>
+      <div className='container mx-auto '>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
             <div className="items-center justify-center carousel HomeContainer">
@@ -103,7 +103,7 @@ const HomeContainer = () => {
         
         <div className='container mx-auto body'>
           <div className='grid justify-center grid-cols-2 gap-4 item-center lg:grid-cols-5'>
-            <div className='flex flex-col items-center h-auto col-span-2 lg:items-start '>
+            <div className='flex flex-col items-center col-span-2 lg:items-start '>
               <h4 >
 
                   <a className="font-semibold underline underline-offset-8" href='/announcements'>
@@ -188,21 +188,22 @@ const HomeContainer = () => {
                                     </svg>
                                 </button>
                            </div> </div>
-                            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={currentImageIndex} onChange={(index) => setCurrentImageIndex(index)} showIndicators={false} showArrows={false}>
+                           <div>
+                            <Carousel className='h-screen' showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={currentImageIndex} onChange={(index) => setCurrentImageIndex(index)} showIndicators={false} showArrows={false}>
                                 {news.map((news, index) => (
                                     <div key="" className="flex flex-col flex-wrap ">
                                         <div key={index}>
                                             <img src={news.src} alt={`Image ${index}`} className="news-img"/>
                                         </div>
                                         <div className="flex flex-col pt-5 pl-2 hover:underline">
-                                            <a href={news.link} className="h-auto font-semibold text-left text-red-800">{news.title}</a>
+                                            <a href={news.link} className="font-semibold text-left text-red-800 ">{news.title}</a>
                                             <p className="text-xs text-left text-gray-500">{news.date}</p>
                                         </div>
                                     </div>
                                 ))}
-                            </Carousel>
+                            </Carousel></div>
           </div>
-          <div className='flex flex-col items-start col-span-1'>
+          <div className='flex flex-col items-center justify-center col-span-2 lg:col-span-1 lg:items-start lg:justify-start'>
             <a className='' href="/goodgovernance/transparency/">
                 <img className="rounded " alt="Philippine Transparency Seal" src="//i.imgur.com/vaNWHC9.jpg"/></a>
             <a className='' href="https://www.foi.gov.ph/requests?agency=PUP" target="_blank">
