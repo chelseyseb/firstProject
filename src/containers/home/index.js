@@ -3,7 +3,9 @@ import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/outline";
 import { CubeIcon } from "@heroicons/react/24/outline";
 import { BuildingLibraryIcon } from "@heroicons/react/24/outline";
-import Navbar from '@components/navbar';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { news } from "@helpers/body_data";
 
 
 const HomeContainer = () => {
@@ -99,17 +101,17 @@ const HomeContainer = () => {
             <div className="line">
         </div>
         
-        <div className='container w-full mx-auto body'>
-          <div className='grid grid-cols-1 lg:grid-cols-3'>
-            <div className='flex flex-col items-center lg:items-start '>
+        <div className='container mx-auto body'>
+          <div className='grid justify-center grid-cols-2 gap-4 item-center lg:grid-cols-5'>
+            <div className='flex flex-col items-center h-auto col-span-2 lg:items-start '>
               <h4 >
-                <span>
+
                   <a className="font-semibold underline underline-offset-8" href='/announcements'>
                     Announcements and Advisories
                   </a>
-                </span>
+
               </h4>
-              <div className='col-span-1 '>
+              <div className=''>
                 <ul className='overflow-y-auto text-sm leading-loose divide-y ul divide-solid'>
                   <li className='py-3.5'>
                     <a className='text-red-700 '>
@@ -167,16 +169,40 @@ const HomeContainer = () => {
                 </ul>
               </div></div>
             
-            <div className='items-center col-span-1 pl-6 lg:items-start'>
-                <h4 className=''>
-                    <span>
+            <div className='flex flex-col items-start col-span-2 lg:items-start'>
+              <div className='flex flex-row'>
+                <h4 className='items-start justify-start'>
                       <a className="font-semibold underline underline-offset-8" href='/announcements'>
                       Latest News from the University
                       </a>
-                    </span>
                   </h4>
+                  <div className="flex flex-row items-center justify-center w-8 mt-3 pl-36">
+                                <button onClick={handlePrevNews} className="flex flex-wrap items-center justify-center w-20 h-6 text-sm text-gray-400 border rounded">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-3 h-3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                    </svg>
+                                </button>
+                                <button onClick={handleNextNews} className="flex flex-wrap items-center justify-center w-20 h-6 text-sm text-gray-400 border rounded">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-3 h-3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                </button>
+                           </div> </div>
+                            <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} selectedItem={currentImageIndex} onChange={(index) => setCurrentImageIndex(index)} showIndicators={false} showArrows={false}>
+                                {news.map((news, index) => (
+                                    <div key="" className="flex flex-col flex-wrap ">
+                                        <div key={index}>
+                                            <img src={news.src} alt={`Image ${index}`} className="news-img"/>
+                                        </div>
+                                        <div className="flex flex-col pt-5 pl-2 hover:underline">
+                                            <a href={news.link} className="h-auto font-semibold text-left text-red-800">{news.title}</a>
+                                            <p className="text-xs text-left text-gray-500">{news.date}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </Carousel>
           </div>
-          <div className='w-7/12 col-span-1 pt-4 place-self-center lg:place-self-end'>
+          <div className='flex flex-col items-start col-span-1'>
             <a className='' href="/goodgovernance/transparency/">
                 <img className="rounded " alt="Philippine Transparency Seal" src="//i.imgur.com/vaNWHC9.jpg"/></a>
             <a className='' href="https://www.foi.gov.ph/requests?agency=PUP" target="_blank">
