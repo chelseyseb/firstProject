@@ -42,7 +42,7 @@ const HomeContainer = () => {
           <img src="6th.jpg" className={`w-full  carousel-item ${currentSlide === 6 ? 'active' : ''}`} />
           <img src="7th.jpg" className={`w-full  carousel-item ${currentSlide === 7 ? 'active' : ''}`} />
         </div>
-        <div className="static flex justify-between transform -translate-y-1/2 mt-14 lg:mt-64 left-5 right-5 ">
+        <div className="static flex justify-between mt-0 transform -translate-y-1/2 lg:mt-64 left-5 right-5 ">
           <button onClick={handlePrev} className="pl-4 arrow h-14 ">
             ❮
           </button>

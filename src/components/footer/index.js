@@ -1,5 +1,12 @@
-import Link from 'next/link'
-import { socialMediaLinks, contactInfo, services, quickLinks, userTypes, governmentLinks, aboutLinks } from '@helpers/footer_data'
+import {
+  socialMediaLinks,
+  contactInfo,
+  services,
+  quickLinks,
+  userTypes,
+  governmentLinks,
+  aboutLinks,
+} from '@helpers/footer_data'
 
 export default function footer() {
   return (
@@ -14,9 +21,9 @@ export default function footer() {
               <ul className="text-xs font-normal text-gray-500 dark:text-gray-500 ">
                 {services.map((service) => (
                   <li className="mb-2" key={service.id}>
-                    <Link legacyBehavior href={service.link}>
-                      <a className="hover:underline">{service.name}</a>
-                    </Link>
+                    <a href={service.link} className="hover:underline">
+                      {service.name}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -25,9 +32,9 @@ export default function footer() {
               <ul className="text-xs font-normal text-gray-500 dark:text-gray-500">
                 {userTypes.map((userType) => (
                   <li key={userType.text} className="mb-2">
-                    <Link legacyBehavior href={userType.link}>
-                      <a className="hover:underline">{userType.text}</a>
-                    </Link>
+                    <a href={userType.link} className="hover:underline">
+                      {userType.text}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -37,9 +44,9 @@ export default function footer() {
               <ul className="text-xs font-normal text-gray-500 dark:text-gray-500">
                 {quickLinks.map((quickLinks) => (
                   <li key={quickLinks.text} className="mb-2">
-                    <Link legacyBehavior href={quickLinks.link}>
-                      <a className="hover:underline">{quickLinks.text}</a>
-                    </Link>
+                    <a href={quickLinks.link} className="hover:underline">
+                      {quickLinks.text}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -49,15 +56,13 @@ export default function footer() {
               <div class="flex mt-2 space-x-6 items-end lg:justify-start justify-center lg:mt-0">
                 <div class="flex flex-col gap-2 items-start justify-center lg:items-center lg:flex-row">
                   {socialMediaLinks.map((link) => (
-                    <Link legacyBehavior key={link.name} href={link.url} passHref>
-                      <a>
-                        <span
-                          className={`inline-flex items-center justify-center w-10 h-10 rounded-full text-white ${link.bgColor} ${link.hoverBgColor}`}
-                        >
-                          <i className={link.icon} style={{ fontSize: '32px' }}></i>
-                        </span>
-                      </a>
-                    </Link>
+                    <a key={link.name} href={link.url}>
+                      <span
+                        className={`inline-flex items-center justify-center w-10 h-10 rounded-full text-white ${link.bgColor} ${link.hoverBgColor}`}
+                      >
+                        <i className={link.icon} style={{ fontSize: '32px' }}></i>
+                      </span>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -80,8 +85,8 @@ export default function footer() {
         </div>
         <div class="row bg-neutral-900 dark:bg-neutral-900 lg:flex lg:items-center lg:justify-between">
           <div className="grid grid-cols-1 gap-8 px-4 py-6 text-center nav-con lg:grid-cols-3 lg:text-left">
-            <div className="flex flex-col gap-2 text-center w-72 lg:text-left lg:flex-row">
-              <img className="w-36 h-36 " src="govph.png" />
+            <div className="flex flex-col gap-2 text-center lg:text-left lg:flex-row">
+              <img className="w-36 h-36 place-self-center lg:place-self-start" src="govph.png" />
               <a href="#" class="text-neutral-700 pt-4 dark:text-neutral-700 text-xs font-semibold">
                 Republic of the Philippines
                 <p className="pt-2 text-xs font-thin text-neutral-700 dark:text-neutral-700">
@@ -90,11 +95,12 @@ export default function footer() {
               </a>
             </div>
             <div className="">
-            <h2 class="mb-0 text-xs font-semibold text-neutral-700 uppercase dark:text-neutral-700 text-center lg:text-left">
+              <h2 class="mb-0 text-xs font-semibold text-neutral-700 uppercase dark:text-neutral-700 text-center lg:text-left">
                 About GOVPH
               </h2>
               <p class="pt-2 text-neutral-700 dark:text-neutral-700 text-xs font-semibold ">
-                Learn more about the Philippine government, its structure, how government works and the people behind it.
+                Learn more about the Philippine government, its structure, how government works and the people behind
+                it.
               </p>
               <ul class="pt-1 text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
                 {aboutLinks.map((link) => (
@@ -106,12 +112,11 @@ export default function footer() {
                 ))}
               </ul>
             </div>
-
             <div className="">
               <h2 class="mb-0 text-xs font-semibold text-neutral-700 uppercase dark:text-neutral-700 text-center lg:text-left">
                 Government Links
               </h2>
-              <ul class="flex flex-col pt-2 text-left  w-72 text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
+              <ul class="flex flex-col pt-2 lg:text-left place-content-center  text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
                 {governmentLinks.map((link) => (
                   <li class="mb-0 py-0.5" key={link.name}>
                     <a href={link.url} class=" text-xs font-thin hover:underline">
