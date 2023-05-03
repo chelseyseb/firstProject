@@ -11,6 +11,7 @@ import {
 export default function footer() {
   return (
     <div className="">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <footer className="">
         <div className="mx-auto ">
           <div class=" grid nav-con grid-cols-1 px-4 py-6 lg:py-8 lg:grid-cols-3 text-center lg:text-left">
@@ -52,7 +53,7 @@ export default function footer() {
               </ul>
             </div>
             <div className="">
-              <h2 class="mb-1 text-xs font-semibold text-red-800 uppercase text-center lg:text-left ">KEEP IN TOUCH</h2>
+              <h2 class="mb-1 text-xs font-semibold text-red-800 uppercase text-center lg:text-left ">KEEP IN TOUCH</h2>             
               <div class="flex mt-2 space-x-6 items-end lg:justify-start justify-center lg:mt-0">
                 <div class="flex flex-col gap-2 items-start justify-center lg:items-center lg:flex-row">
                   {socialMediaLinks.map((socialMediaLink) => (
@@ -60,7 +61,7 @@ export default function footer() {
                       <span
                         className={`inline-flex items-center justify-center w-10 h-10 rounded-full text-white ${socialMediaLink.bgColor} ${socialMediaLink.hoverBgColor}`}
                       >
-                        <i className={socialMediaLink.icon} style={{ fontSize: '32px' }}></i>
+                        <i className={` ${socialMediaLink.icon}`} style={{ color: 'white', fontSize: '32px' }}></i>
                       </span>
                     </a>
                   ))}

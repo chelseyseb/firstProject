@@ -1,8 +1,9 @@
 export const socialMediaLinks = [
+  
     {
       name: 'Facebook',
       url: 'https://www.facebook.com/ThePUPOfficial',
-      icon: 'fa fa-facebook',
+      icon: 'fa fa-brands fa-facebook',
       bgColor: 'bg-red-800',
       hoverBgColor: 'hover:bg-blue-800',
     },
