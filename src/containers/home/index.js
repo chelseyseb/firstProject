@@ -9,14 +9,6 @@ const HomeContainer = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const totalSlides = 7 // or set dynamically based on number of carousel items
 
-  function handleNext() {
-    setCurrentSlide((currentSlide + 1) % totalSlides)
-  }
-
-  function handlePrev() {
-    setCurrentSlide((currentSlide - 1 + totalSlides) % totalSlides)
-  }
-
   function handleNextNews() {
     setCurrentImageIndex((currentSlide + 1) % totalSlides)
   }
@@ -26,33 +18,7 @@ const HomeContainer = () => {
   }
   return (
     <div className="mx-auto ">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      ></link>
-
-      <div className="items-center justify-center carousel-top HomeContainer">
-        <div className="left-0 right-0 top-auto flex justify-between mt-4 transform -translate-y-1/2">
-          <img src="pup.jpg" className={`w-full carousel-item ${currentSlide === 0 ? 'active' : ''}`} />
-          <img src="1st.jpg" className={`w-full  carousel-item ${currentSlide === 1 ? 'active' : ''}`} />
-          <img src="2nd.jpg" className={`w-full carousel-item ${currentSlide === 2 ? 'active' : ''}`} />
-          <img src="3rd.jpg" className={`w-full  carousel-item ${currentSlide === 3 ? 'active' : ''}`} />
-          <img src="4th.jpg" className={`w-full  carousel-item ${currentSlide === 4 ? 'active' : ''}`} />
-          <img src="5th.jpg" className={`w-full carousel-item ${currentSlide === 5 ? 'active' : ''}`} />
-          <img src="6th.jpg" className={`w-full  carousel-item ${currentSlide === 6 ? 'active' : ''}`} />
-          <img src="7th.jpg" className={`w-full  carousel-item ${currentSlide === 7 ? 'active' : ''}`} />
-        </div>
-        <div className="static flex justify-between mt-0 transform -translate-y-1/2 lg:mt-64 left-5 right-5 ">
-          <button onClick={handlePrev} className="pl-4 arrow h-14 ">
-            ❮
-          </button>
-          <button onClick={handleNext} className="pr-4 arrow h-14 ">
-            ❯
-          </button>
-        </div>
-      </div>
-
-      <div className="container mx-auto body">
+      <div className="container body">
         <div className="grid pt-4 grid-col-1 lg:gap-30 gap-14 lg:pt-0 place-self-center lg:grid-cols-4 lg:grid-row">
           {icons.map((icons, index) => (
             <a href={icons.link} key={index}>
@@ -112,16 +78,16 @@ const HomeContainer = () => {
           </div>
 
           <div className="flex flex-col col-span-2">
-            <div className="flex flex-row ">
+            <div className="flex flex-row justify-between">
               <h4 className="items-start justify-start">
                 <a className="font-semibold underline underline-offset-8" href="/announcements">
                   Latest News from the University
                 </a>
               </h4>
-              <div className="flex flex-row items-center justify-center w-8 pl-24 mt-3 lg:pl-36">
+              <div className="flex pt-5 w-9">
                 <button
                   onClick={handlePrevNews}
-                  className="flex flex-wrap items-center justify-center w-20 h-6 text-sm text-gray-400 border rounded"
+                  className="flex flex-wrap items-center justify-center w-20 h-5 text-sm text-gray-400 border rounded"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +102,7 @@ const HomeContainer = () => {
                 </button>
                 <button
                   onClick={handleNextNews}
-                  className="flex flex-wrap items-center justify-center w-20 h-6 text-sm text-gray-400 border rounded"
+                  className="flex flex-wrap items-center justify-center w-20 h-5 text-sm text-gray-400 border rounded"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
