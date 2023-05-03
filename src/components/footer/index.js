@@ -58,7 +58,7 @@ export default function footer() {
                   {socialMediaLinks.map((socialMediaLink) => (
                     <a key={socialMediaLink.name} href={socialMediaLink.url}>
                       <span
-                        className={'inline-flex items-center justify-center w-10 h-10 rounded-full text-white ${socialMediaLink.bgColor} ${socialMediaLink.hoverBgColor}'}
+                        className={`inline-flex items-center justify-center w-10 h-10 rounded-full text-white ${socialMediaLink.bgColor} ${socialMediaLink.hoverBgColor}`}
                       >
                         <i className={socialMediaLink.icon} style={{ fontSize: '32px' }}></i>
                       </span>
