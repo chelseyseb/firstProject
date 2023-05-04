@@ -126,7 +126,7 @@ export default function Navbar() {
               </div>
               <div class=" flex justify-center items-center ">
                 <button
-                  className="absolute z-10 border outline-none top-16 right-8 mobile-menu-button"
+                  className="absolute border outline-none top-16 right-8 mobile-menu-button"
                   onClick={() => setShowMenu(!showMenu)}
                 >
                   <svg
@@ -148,12 +148,12 @@ export default function Navbar() {
               className={`lg:hidden w-screen mobile-menu ${showMenu ? '' : 'hidden'}`}
               x-show={showMenu ? 'false' : 'true'}
             >
-              <div className="bg-white">
-                <ul className="mt-2">
-                  <li className="active">
+              <div className="bg-white ">
+                <ul className="">
+                  <li className="mt-2 active">
                     <a
                       href="index.html"
-                      className="flex items-center justify-between px-2 py-4 text-sm font-semibold text-gray-800"
+                      className="flex items-center justify-between px-2 py-4 text-sm font-semibold text-gray-800 "
                     >
                       <span>ABOUT PUP</span>
                       <svg

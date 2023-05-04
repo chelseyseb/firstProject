@@ -275,6 +275,21 @@ nav{
   background-size: cover;
 }
 
+.modal-bg {
+  background-size: cover;
+  background-image: url(/bg1.jpg);
+  background-repeat: no-repeat;
+  background-color: #eee;
+  background-position: center center;
+}
+
+.container-modal {
+  height: 200px;
+  width: 400px;
+}
+
+
+
 
 @media (min-width: 350px)  and (max-width: 1280px){
 

@@ -76,8 +76,8 @@ export const Slider = () => {
         renderIndicator={customIndicator}
       >
         {sliderImages.map((image, index) => (
-          <div key={index}>
-            <img src={image.src} alt={`Image ${index}`} />
+          <div className='z-0' key={index}>
+            <img  src={image.src} alt={`Image ${index}`} />
           </div>
         ))}
       </Carousel>
