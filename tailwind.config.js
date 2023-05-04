@@ -24,6 +24,12 @@ module.exports = {
       padding: {
         63: '15.5rem',
       },
+      fontFamily: {
+        cinzel: ['Cinzel', 'Arial', 'Helvetica', 'sans-serif'],
+      },
+      variants: {
+        display:['group-hover']
+       }
     },
   },
   plugins: [],

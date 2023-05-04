@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react'
 const HomepageContainer = () => {
   return (
     <>
-      {/* <Modal /> */}
+      <Modal />
       <NavTop />
       <Slider />
       <Homepage />

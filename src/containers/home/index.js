@@ -41,7 +41,7 @@ const HomeContainer = () => {
                     />
                   </svg>
                 </div>
-                <h4 className="w-40 text-xs font-normal place-self-center hover:underline">
+                <h4 className="w-40 font-normal body-font place-self-center hover:underline">
                   <strong>{icons.title}</strong>
                 </h4>
               </div>
@@ -65,7 +65,7 @@ const HomeContainer = () => {
                 <div key="">
                   <ul>
                     <li>
-                      <a className="text-red-700" href={announcement.link}>
+                      <a className="text-red-700 body-font" href={announcement.link}>
                         {announcement.title}
                       </a>
                       <br></br>
@@ -133,7 +133,7 @@ const HomeContainer = () => {
                       <img src={news.src} alt={`Image ${index}`} className="news-img" />
 
                       <div className="flex flex-col lg:pt-5 hover:underline">
-                        <a href={news.link} className="font-bold text-red-800 lg:text-left ">
+                        <a href={news.link} className="font-bold text-red-800 body-font lg:text-left ">
                           {news.title}
                         </a>
                         <p className="text-xs text-center text-gray-500 lg:text-left">{news.date}</p>
@@ -188,6 +188,7 @@ const HomeContainer = () => {
                 ></iframe>
               </div>
             </div>
+            
           </div>
         </div>
       </div>

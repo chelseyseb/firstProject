@@ -12,7 +12,7 @@ export const socialMediaLinks = [
       url: 'https://twitter.com/ThePUPOfficial',
       icon: 'fa fa-brands fa-twitter',
       bgColor: 'bg-red-800',
-      hoverBgColor: 'hover:bg-blue-800',
+      hoverBgColor: 'hover:bg-blue-400',
     },
     {
       name: 'YouTube',
@@ -33,7 +33,7 @@ export const socialMediaLinks = [
       url: 'https://www.pup.edu.ph/rss/',
       icon: 'fa fa-solid fa-rss',
       bgColor: 'bg-red-800',
-      hoverBgColor: 'hover:bg-red-700',
+      hoverBgColor: 'hover:bg-red-600',
     },
     {
       name: 'Spotify',

@@ -9,9 +9,22 @@
 // 5. create a postcss.config.js and copy content of file
 // 6. add prettier and headwind
 @import "./colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
 
 p {
-  color: $red;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 13px;
+}
+
+.footer-p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 11px;
+}
+
+input{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 13px;
 }
 
 .screen {
@@ -19,16 +32,42 @@ p {
   height: auto;
 }
 
-
-span {
-  font-family: Cinzel,Arial,Helvetica,sans-serif;
-  font-weight: 700;
-  letter-spacing: 0em;
-  color: #800;
-  display: inline-block;
-  margin-top: 20px;
+.body-font {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
 }
 
+span {
+  font-family: 'Cinzel','Arial', 'Helvetica', 'sans-serif';
+  color: #800;
+}
+
+.services-widget {
+  position: fixed;
+  display: block;
+  bottom: 30vh;
+  right: 10px;
+  z-index: 999997;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: normal;
+  color: #fff !important;
+  border-radius: 25px !important;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  background-color: rgba(188, 188, 188, 0.6);
+  -webkit-backdrop-filter: blur(10px) saturate(125%) !important;
+  backdrop-filter: blur(10px) saturate(125%) !important;
+  overflow: hidden;
+  cursor: pointer;
+}
 
 .icon-effect-2 {
   color: #800;
@@ -66,12 +105,7 @@ span {
 }
 
 .nav-bg {
-  width: auto;
-  /* background-color: #eee; */
-  background-color: rgba(255,255,255,0.36);
-  backdrop-filter: blur(10px) saturate(125%);
-  border-bottom: 1px solid #f2f2f2;
-  font-size: 10pt;
+    background-image: url(/bg.jpg);
 }
 
 .nav-bg-bot{
@@ -178,7 +212,7 @@ span {
 
 a{
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -250,10 +284,6 @@ footer{
   margin-left: auto;
 }
 
-nav{
-  width: auto;
-  height: auto;
-}
 
 footer{
   width: auto;
@@ -266,16 +296,44 @@ footer{
   object-fit: none;
 }
 
-nav{
+.nav{
+  width: 100%;
+  z-index: 999999;
+  background: #fff url(/bg.jpg) center repeat-x;
+  background-size: 100%;
+}
+.nav-effects {
   line-height: 20px;
   font-size: 10px;
-  background-image: url(/bg.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center ;
   background-size: cover;
+  z-index: 1000;
+  background-color: #eee;
+  background-color: rgba(255,255,255,0.36);
+  backdrop-filter: blur(10px) saturate(125%);
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 10pt;
+}
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 300px;
+  background-color: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px) saturate(168%) !important;
+  border-radius: 8px;
+  border: 1px solid #800000;
+  z-index: 100000;
+  transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  box-shadow: 0px 20px 44px 0px rgb(0 0 0 / 68%) !important;
 }
 
 .modal-bg {
+  width: 900px;
   background-size: cover;
   background-image: url(/bg1.jpg);
   background-repeat: no-repeat;
@@ -283,10 +341,28 @@ nav{
   background-position: center center;
 }
 
-.container-modal {
-  height: 200px;
-  width: 400px;
+.cinzel {
+  font-family: 'Cinzel', Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
+
+.Carousel {
+  z-index: 1;
+}
+//   .modal-content{
+//     background: #fff;
+//     position: fixed;
+//     width: 380px;
+//     height: 420px;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     border-radius: 5px;
+//     text-align: center;
+//     align-items: center;
+//     display: flex;
+//     flex-direction: column;
+// }
 
 
 
