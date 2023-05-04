@@ -5,8 +5,6 @@ import Image from 'next/image'
 import React from 'react'
 
 export default function modal() {
-  const [showModal, setShowModal] = useState(true)
-
   return (
     <div className="container">
       <link
@@ -14,7 +12,6 @@ export default function modal() {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       ></link>
 
-      {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
           <div className="relative items-center justify-center block modal-bg">
             <div className="relative ">
@@ -68,7 +65,6 @@ export default function modal() {
           </div>
           {/* <div className="fixed inset-0 z-50 bg-black opacity-25"></div> */}
         </div>
-      )}
 
       {/* </div> */}
 
