@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { news, icons, announcements, badges } from '@helpers/body_data'
-
+import Image from 'next/image'
 
 const HomeContainer = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -157,9 +157,9 @@ const HomeContainer = () => {
       <div className="container mx-auto body place-items-center">
         <div className=" place-items-center">
           <div className="grid grid-cols-1 lg:pb-2 lg:gap-8 lg:grid-cols-3">
-            <div className="grid col-span-1 lg:place-items-end place-items-center">
+            <div className="hidden col-span-1 lg:grid lg:place-items-end place-items-center">
               <a
-                class="twitter-timeline"
+                class="twitter-timeline "
                 data-width="350"
                 data-height="885"
                 data-theme="dark"
@@ -188,7 +188,6 @@ const HomeContainer = () => {
                 ></iframe>
               </div>
             </div>
-            
           </div>
         </div>
       </div>

@@ -13,39 +13,39 @@ export default function Navbar() {
       <nav className="border-white border-b-1 nav-effects">
         <div className="flex items-center justify-center h-8 lg:justify-between nav-con">
           <div className="flex h-8 ">
-            <ul className="flex flex-row space-y-0 place-self-center lg:space-x-1 ">
-              <li className="py-4 hover:bg-red-800">
+            <ul className="flex flex-row space-y-0 place-self-center lg:space-x-4 ">
+              <li className=" hover:bg-red-800">
                 <img className="flex w-6 h-7 " src="govph.png" />
               </li>
               <li className="flex flex-row text-xs text-gray-500 place-items-center ">
                 <Link legacyBehavior href="">
-                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-4 py-2 text-[13px]">Home</a>
+                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">Home</a>
                 </Link>
               </li>
               <li className="flex flex-row hidden text-xs text-gray-500 place-items-center lg:flex">
                 <Link legacyBehavior href="/blogs">
-                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-4 py-2 text-[13px]">
+                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">
                     Good Governance
                   </a>
                 </Link>
               </li>
               <li className="flex flex-row hidden text-xs text-gray-500 place-items-center lg:flex">
                 <Link legacyBehavior href="/about">
-                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-4 py-2 text-[13px]">
+                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">
                     Transparency
                   </a>
                 </Link>
               </li>
               <li className="flex flex-row hidden text-xs text-gray-500 place-items-center lg:flex">
                 <Link legacyBehavior href="/contact">
-                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-4 py-2 text-[13px]">
+                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">
                     International Affairs
                   </a>
                 </Link>
               </li>
               <li className="flex flex-row hidden text-xs text-gray-500 place-items-center lg:flex">
                 <Link legacyBehavior href="/contact">
-                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-4 py-2 text-[13px]">
+                  <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">
                     Bid Notices and Invitation
                   </a>
                 </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
             </ul>
 
             <div className="items-center px-4 py-2 pl-0 text-xs lg:pl-0 xl:pl-52 lg:ml-auto text-slate-500">
-              <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-4 py-2 text-[13px]" href="#">
+              <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]" href="#">
                 Contact Us
               </a>
             </div>

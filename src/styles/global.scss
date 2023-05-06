@@ -1,20 +1,41 @@
 // 1.yarn add tailwindcss postcss autoprefixer
 // 2. npx tailwindcss init
 // 3. add the ff in the global style
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 // 4.   mode: "jit",
 //      content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
 // 5. create a postcss.config.js and copy content of file
 // 6. add prettier and headwind
-@import "./colors.scss";
+@import './colors.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Noto+Sans&display=swap');
 
 p {
   font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+}
+
+th {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+td {
+  font-family: 'Noto Sans', sans-serif;
   font-size: 13px;
+}
+blockquote {
+  padding: 10px 20px;
+  line-height: 2;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+
+.blockquote-p {
+  line-height: 2;
+  font-size: 17.5px;
 }
 
 .footer-p {
@@ -22,7 +43,13 @@ p {
   font-size: 11px;
 }
 
-input{
+.modal-p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input {
   font-family: 'Noto Sans', sans-serif;
   font-size: 13px;
 }
@@ -37,36 +64,30 @@ input{
   font-size: 16px;
 }
 
+.contact-span {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 span {
-  font-family: 'Cinzel','Arial', 'Helvetica', 'sans-serif';
+  font-family: 'Cinzel', 'Arial', 'Helvetica', 'sans-serif';
   color: #800;
 }
 
 .services-widget {
-  position: fixed;
   display: block;
-  bottom: 30vh;
-  right: 10px;
-  z-index: 999997;
-  width: 48px;
-  height: 48px;
+  // z-index: 100;
   line-height: 48px;
   font-size: normal;
-  color: #fff !important;
-  border-radius: 25px !important;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  background-color: rgba(188, 188, 188, 0.6);
-  -webkit-backdrop-filter: blur(10px) saturate(125%) !important;
-  backdrop-filter: blur(10px) saturate(125%) !important;
   overflow: hidden;
   cursor: pointer;
+}
+
+.fab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .icon-effect-2 {
@@ -89,47 +110,48 @@ span {
   line-height: 64px;
   text-align: center;
   margin: 0;
-  
 }
 
-.container{
+.container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.body{
+.body {
   width: 1170px;
   height: auto;
 }
 
 .nav-bg {
-    background-image: url(/bg.jpg);
+  background-image: url(/bg.jpg);
 }
 
-.nav-bg-bot{
-    margin-bottom: 0;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
+.nav-bg-bot {
+  margin-bottom: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
 }
 
 .row {
-  margin-left:auto;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
 }
 
 .line {
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0));
-  margin-top:25px; 
-  margin-bottom:55px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  margin-top: 25px;
+  margin-bottom: 55px;
 }
-.container-body{
+.container-body {
   width: 1170px;
   height: auto;
   padding-right: -15px;
@@ -149,7 +171,6 @@ span {
   // margin-left: auto;
 }
 
-
 .badge {
   height: 500px;
   display: flex;
@@ -163,16 +184,15 @@ span {
 }
 
 .img {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
-.footer-icons{
+.footer-icons {
   display: flex;
   flex-direction: row;
 }
-
 
 .arrow {
   font-style: normal;
@@ -186,7 +206,7 @@ span {
   height: 70px;
   text-align: center;
   background: #fff;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.15);
   z-index: 2;
   line-height: 50px;
 }
@@ -210,15 +230,21 @@ span {
   -o-transition: all 0.2s ease-in-out;
 }
 
-a{
+a {
   font-family: 'Noto Sans', sans-serif;
   font-size: 13px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Noto Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   text-align: center;
+  line-height: 30px;
   margin: 20px 0 10px 0;
   color: #800;
 }
@@ -232,11 +258,10 @@ h4 {
   height: auto;
 }
 
-footer{
+footer {
   background-color: #eee;
-    /* border-top: 4px solid #aaa; */
-    color: #555;
-    
+  /* border-top: 4px solid #aaa; */
+  color: #555;
 }
 
 .footer-widget h4 {
@@ -276,7 +301,7 @@ footer{
   z-index: 0;
 }
 
-.nav-con{
+.nav-con {
   width: 1170px;
   padding-right: 15px;
   padding-left: 15px;
@@ -284,19 +309,18 @@ footer{
   margin-left: auto;
 }
 
-
-footer{
+footer {
   width: auto;
   height: auto;
 }
 
-.news-img{
+.news-img {
   width: 100%;
   height: 500px;
   object-fit: none;
 }
 
-.nav{
+.nav {
   width: 100%;
   z-index: 999999;
   background: #fff url(/bg.jpg) center repeat-x;
@@ -306,11 +330,11 @@ footer{
   line-height: 20px;
   font-size: 10px;
   background-repeat: no-repeat;
-  background-position: center ;
+  background-position: center;
   background-size: cover;
   z-index: 1000;
   background-color: #eee;
-  background-color: rgba(255,255,255,0.36);
+  background-color: rgba(255, 255, 255, 0.36);
   backdrop-filter: blur(10px) saturate(125%);
   border-bottom: 1px solid #f2f2f2;
   font-size: 10pt;
@@ -320,7 +344,7 @@ footer{
   left: 0;
   top: 100%;
   width: 300px;
-  background-color: rgba(255,255,255,0.88);
+  background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px) saturate(168%) !important;
   border-radius: 8px;
   border: 1px solid #800000;
@@ -334,6 +358,7 @@ footer{
 
 .modal-bg {
   width: 900px;
+  height: auto;
   background-size: cover;
   background-image: url(/bg1.jpg);
   background-repeat: no-repeat;
@@ -364,12 +389,8 @@ footer{
 //     flex-direction: column;
 // }
 
-
-
-
-@media (min-width: 350px)  and (max-width: 1280px){
-
-nav{
+@media (min-width: 250px) and (max-width: 1280px) {
+  nav {
     background-color: white;
     line-height: 20px;
     font-size: 10px;
@@ -379,7 +400,7 @@ nav{
     background-size: cover;
   }
 
-  .nav-con{
+  .nav-con {
     width: auto;
     padding-right: 15px;
     padding-left: 15px;
@@ -388,16 +409,16 @@ nav{
   }
 
   .carousel-top {
-    background-size:cover;
+    background-size: cover;
     width: 100%;
     height: 250px;
     display: block;
-    position:relative;
+    position: relative;
     overflow: hidden;
   }
 
   .carousel-item {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
@@ -405,13 +426,13 @@ nav{
     z-index: -1;
   }
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .announcements{
+  .announcements {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -427,7 +448,7 @@ nav{
     height: 100%;
   }
 
-  .body{
+  .body {
     width: auto;
   }
 
@@ -440,26 +461,33 @@ nav{
     height: 100%;
   }
 
-  .footer-icons{
+  .footer-icons {
     display: flex;
     flex-direction: column;
   }
 
-  footer{
+  footer {
     background-color: #eee;
-      width: auto;
-      color: #555;
-  }
-  
-  .container{
-      flex-direction: column;
-      align-content: center;
-  }
-  .content-container{
-      margin-bottom: 20px;
-      width: 80%;
-      height: auto;
+    width: auto;
+    color: #555;
   }
 
+  .container {
+    flex-direction: column;
+    align-content: center;
+  }
+  .content-container {
+    margin-bottom: 20px;
+    width: 80%;
+    height: auto;
+  }
+  .modal-bg {
+    width: auto;
+    height: auto;
+    background-size: cover;
+    background-image: url(/bg1.jpg);
+    background-repeat: no-repeat;
+    background-color: #eee;
+    background-position: center center;
+  }
 }
-

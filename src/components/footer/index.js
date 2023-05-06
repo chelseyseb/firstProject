@@ -9,6 +9,7 @@ import {
 } from '@helpers/footer_data'
 
 export default function footer() {
+
   return (
     <div className="">
       <link
@@ -44,7 +45,9 @@ export default function footer() {
               </ul>
             </div>
             <div className="items-center ">
-              <h2 class="mb-3 text-xs font-semibold text-red-800 pt-4 lg:pt-0 uppercase text-center lg:text-left ">QUICK LINKS</h2>
+              <h2 class="mb-3 text-xs font-semibold text-red-800 pt-4 lg:pt-0 uppercase text-center lg:text-left ">
+                QUICK LINKS
+              </h2>
               <ul className="text-gray-500 dark:text-gray-500">
                 {quickLinks.map((quickLinks) => (
                   <li key={quickLinks.text} className="mb-1">
@@ -56,7 +59,9 @@ export default function footer() {
               </ul>
             </div>
             <div className="col-span-1 lg:col-span-2">
-              <h2 class="mb-1 text-xs font-semibold text-red-800 pt-4 lg:pt-0  uppercase text-center lg:text-left ">KEEP IN TOUCH</h2>
+              <h2 class="mb-1 text-xs font-semibold text-red-800 pt-4 lg:pt-0  uppercase text-center lg:text-left ">
+                KEEP IN TOUCH
+              </h2>
               <div class="flex mt-2 space-x-6 items-end lg:justify-start justify-center lg:mt-2">
                 <div class="flex flex-col gap-5 items-start justify-center pt-1 lg:items-center lg:flex-row">
                   {socialMediaLinks.map((socialMediaLink) => (
@@ -81,15 +86,29 @@ export default function footer() {
                   </li>
                 ))}
               </ul>
-              <h2 class="mb-3 text-xs font-semibold text-red-800 uppercase pt-4 lg:pt-0  text-center lg:text-left">PUPWEBSITE 10</h2>
+              <h2 class="mb-3 text-xs font-semibold text-red-800 uppercase pt-4 lg:pt-0  text-center lg:text-left">
+                PUPWEBSITE 10
+              </h2>
               <p>
-                <a className='body-font hover:underline' href="/terms/">Terms of Use</a> | <a className='body-font hover:underline' href="/privacy/">Privacy Statement</a> |{' '}
-                <a className='body-font hover:underline' href="/website/">About PUPWebSite</a>
+                <a className="body-font hover:underline" href="/terms/">
+                  Terms of Use
+                </a>{' '}
+                |{' '}
+                <a className="body-font hover:underline" href="/privacy/">
+                  Privacy Statement
+                </a>{' '}
+                |{' '}
+                <a className="body-font hover:underline" href="/website/">
+                  About PUPWebSite
+                </a>
               </p>
             </div>
           </div>
           <span class="footer-p text-gray-600 sm:text-center pb-4 flex flex-row items-center justify-center">
-            ©<a className='text-gray-600 footer-p' href="https://flowbite.com/">1998-2021 POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</a>
+            ©
+            <a className="text-gray-600 footer-p" href="https://flowbite.com/">
+              1998-2021 POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
+            </a>
           </span>
         </div>
         <div class="row bg-neutral-900 dark:bg-neutral-950 lg:flex lg:items-center lg:justify-between">
