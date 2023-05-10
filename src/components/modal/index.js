@@ -20,7 +20,7 @@ export default function Modal() {
   return (
     <>
     {ShowModal && (
-    <div className="container ">
+    <div className="container" onClick={close}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"></link>
 
@@ -29,7 +29,7 @@ export default function Modal() {
           <div className="relative mx-4 mb-4">
             <div className="flex flex-col ">
               <div>
-              <h2 className="my-5 text-lg font-bold text-center text-red-950 cinzel">
+              <h2 className="my-5 text-lg font-bold text-center text-red-950 cinzel" >
                 <button type="button" className="float-right text-gray-400 hover:text-gray-500" onClick={handleCloseModal}>
                   <FontAwesomeIcon icon={faTimes} height={11} width={11} />
                 </button>

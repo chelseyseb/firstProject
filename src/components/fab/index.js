@@ -19,6 +19,12 @@ const FloatingActionButtons = () => {
     setShowModal(true)
   }
 
+  function handleClickOutside(event) {
+    if (event.target === event.currentTarget) {
+      handleCloseModal();
+    }
+  }
+
   const toggleVisibility = () => {
     if (window.pageYOffset > 400) {
       setVisible(true)
@@ -39,14 +45,14 @@ const FloatingActionButtons = () => {
   return (
     <>
       {ShowModal && (
-        <div className="container ">
+        <div className="container" >
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           ></link>
           <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"></link>
 
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+          <div onClick={handleClickOutside} className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-x-hidden outline-none focus:outline-none">
             <div className="relative items-center justify-center modal-bg">
               <div className="relative mx-4 mb-4">
                 <div className="flex flex-col ">
@@ -131,7 +137,7 @@ const FloatingActionButtons = () => {
       </button>
       <button
         className={`fixed bottom-14 bg-yellow-300 rounded-full hover:opacity-100 hover:bg-yellow-500 w-10 h-10 right-4 z-10 ${
-          visible ? 'opacity-50' : 'opacity-0'
+          visible ? "block" : "hidden"
         }`}
         onClick={scrollToTop}
       >

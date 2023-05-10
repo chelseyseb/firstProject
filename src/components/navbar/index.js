@@ -61,7 +61,7 @@ export default function Navbar() {
         </div>
       </nav>
       <nav>
-        <div className="bg-red-800 lg:bg-transparent nav-con">
+        <div className="bg-maroon lg:bg-transparent nav-con">
           <div className="flex flex-wrap items-center justify-between h-18 ">
             <div className="flex flex-wrap justify-between">
               <div>
@@ -84,7 +84,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {links.map(({ href, label, target }) => (
-                            <li className="px-4 py-2 hover:bg-white group-hover:block" key={label}>
+                            <li className="px-4 py-2 rounded-lg hover:bg-white group-hover:block" key={label}>
                               <Link legacyBehavior href={href}>
                                 <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                                   {label}
@@ -101,7 +101,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {academic.map((item, index) => (
-                            <li key={index} className="px-4 py-2 hover:bg-white group-hover:block">
+                            <li key={index} className="px-4 py-2 rounded-lg hover:bg-white group-hover:block">
                               <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                                 {item.title}
                                 <a
@@ -123,7 +123,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {studentsLinks.map((link, index) => (
-                            <li key={index} className="px-4 py-2 hover:bg-white group-hover:block">
+                            <li key={index} className="px-4 py-2 rounded-lg hover:bg-white group-hover:block">
                               <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                               {link.text}
                               <a
@@ -144,7 +144,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {researchLinks.map((link, index) => (
-                            <li className="px-4 py-2 hover:bg-white group-hover:block" key={index}>
+                            <li className="px-4 py-2 rounded-lg hover:bg-white group-hover:block" key={index}>
                               <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                               {link.title}
                               <a className="font-thin text-gray-500 hover:text-red-700" href={link.link}>
