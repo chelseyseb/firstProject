@@ -18,7 +18,7 @@ export default function Navbar() {
                 <img className="flex w-6 h-7 " src="govph.png" />
               </li>
               <li className="flex flex-row text-xs text-gray-500 place-items-center ">
-                <Link legacyBehavior href="">
+                <Link legacyBehavior href="/">
                   <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">Home</a>
                 </Link>
               </li>
@@ -37,7 +37,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="flex flex-row hidden text-xs text-gray-500 place-items-center lg:flex">
-                <Link legacyBehavior href="/contact">
+                <Link legacyBehavior href="/international">
                   <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]">
                     International Affairs
                   </a>
@@ -53,9 +53,9 @@ export default function Navbar() {
             </ul>
 
             <div className="items-center px-4 py-2 pl-0 text-xs lg:pl-0 xl:pl-52 lg:ml-auto text-slate-500">
-              <a className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]" href="#">
+              <Link className="hover:bg-red-800 hover:text-white hover:cursor-pointer px-2 py-2 text-[13px]" href="/contactus">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {links.map(({ href, label, target }) => (
-                            <li className="px-4 py-2 rounded-lg hover:bg-white group-hover:block" key={label}>
+                            <li className="px-4 py-2 rounded hover:bg-white group-hover:block" key={label}>
                               <Link legacyBehavior href={href}>
                                 <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                                   {label}
@@ -101,7 +101,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {academic.map((item, index) => (
-                            <li key={index} className="px-4 py-2 rounded-lg hover:bg-white group-hover:block">
+                            <li key={index} className="px-4 py-2 rounded hover:bg-white group-hover:block">
                               <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                                 {item.title}
                                 <a
@@ -123,7 +123,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {studentsLinks.map((link, index) => (
-                            <li key={index} className="px-4 py-2 rounded-lg hover:bg-white group-hover:block">
+                            <li key={index} className="px-4 py-2 rounded hover:bg-white group-hover:block">
                               <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                               {link.text}
                               <a
@@ -144,7 +144,7 @@ export default function Navbar() {
                         </a>
                         <ul className="hidden text-gray-800 divide-y divide-gray-300 dropdown group-hover:block">
                           {researchLinks.map((link, index) => (
-                            <li className="px-4 py-2 rounded-lg hover:bg-white group-hover:block" key={index}>
+                            <li className="px-4 py-2 rounded hover:bg-white group-hover:block" key={index}>
                               <p className="font-thin text-gray-500 transition duration-200 ease-in-out transform hover:translate-x-2 hover:text-red-700">
                               {link.title}
                               <a className="font-thin text-gray-500 hover:text-red-700" href={link.link}>
@@ -190,10 +190,10 @@ export default function Navbar() {
                     </Form>
                   </Formik>
                 </span>
-              </div>
+              </div></div>
               <div class=" flex justify-center items-center ">
                 <button
-                  className="absolute border outline-none top-16 right-8 mobile-menu-button"
+                  className="absolute border outline-none top-16 right-8 "
                   onClick={() => setShowMenu(!showMenu)}
                 >
                   <svg
@@ -210,13 +210,13 @@ export default function Navbar() {
                   </svg>
                 </button>
               </div>
-            </div>
+            
             <div
-              className={`lg:hidden w-screen mobile-menu ${showMenu ? '' : 'hidden'}`}
+              className={`lg:hidden w-full  ${showMenu ? 'block' : 'hidden'}`}
               x-show={showMenu ? 'false' : 'true'}
             >
               <div className="">
-                <ul className="w-full bg-white divide-y divide-gray-300 rounded">
+                <ul className="w-full bg-white divide-y divide-gray-300 ">
                   <li className="mt-2 active">
                     <a
                       href="index.html"

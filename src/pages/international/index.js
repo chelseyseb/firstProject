@@ -79,7 +79,7 @@ const International = ({ articlesData }) => {
                   </button>
                 </div>
               </div>
-              <div className="flex flex-row justify-between pb-6">
+              <div className="flex flex-col justify-between pb-6 md:flex-row">
                 {articlesData &&
                   articlesData.map((value, key) => (
                   
@@ -101,7 +101,7 @@ const International = ({ articlesData }) => {
                         <Link legacyBehavior href={{ pathname: `/international/${value.id}` }}>
                         <p
                           
-                          className="font-bold text-red-800 body-font lg:text-left "
+                          className="font-bold text-center text-red-800 body-font lg:text-left "
                         >
                           {value.title}
                         </p></Link>

@@ -417,6 +417,10 @@ footer {
 .Carousel {
   z-index: 1;
 }
+
+.modal-con{
+  padding-top: 20px;
+}
 //   .modal-content{
 //     background: #fff;
 //     position: fixed;
@@ -432,7 +436,7 @@ footer {
 //     flex-direction: column;
 // }
 
-@media (min-width: 250px) and (max-width: 1280px) {
+@media (min-width: 280px) and (max-width: 1280px) {
   nav {
     background-color: white;
     line-height: 20px;
@@ -445,8 +449,8 @@ footer {
 
   .nav-con {
     width: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -526,7 +530,7 @@ footer {
   }
   .modal-bg {
     width: auto;
-    height: auto;
+    height: 100vh;
     background-size: cover;
     background-image: url(/bg1.jpg);
     background-repeat: no-repeat;
@@ -541,4 +545,12 @@ footer {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .image-container {
+    position: relative;
+    object-fit:contain;
+    width: 100%;
+    height: 320px;
+  }
+  
 }
