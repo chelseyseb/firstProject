@@ -6,6 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Link from 'next/link'
+import { Carousel } from 'react-responsive-carousel'
 
 const International = ({ articlesData }) => {
   console.log(articlesData)
@@ -80,35 +81,40 @@ const International = ({ articlesData }) => {
                 </div>
               </div>
               <div className="flex flex-col justify-between pb-6 md:flex-row">
-                {articlesData &&
-                  articlesData.map((value, key) => (
-                  
-                    <div className="image-container" key={key}>
-                      
-                      <img src={value.main_article_photo} className=" articles-img" />
-                      
-                        <div className="overlay">
-                          <div className="overlay-content">
+                <Carousel
+                  showArrows={false}
+                  showStatus={false}
+                  showIndicators={false}
+                  showThumbs={false}
+                  infiniteLoop={true}
+                  centerMode={true}
+                  centerSlidePercentage={33.3333}
+                >
+                  {articlesData &&
+                    articlesData.map((value, key) => (
+                      <div className="mr-2 " key={key}>
+                        <div className=" overlay">
+                          <div className=" overlay-content">
                             <div className="note-icon">
                               <Link legacyBehavior key={key} href={{ pathname: `/international/${value.id}` }}>
-                              <i class="fa fa-file-text-o"></i></Link>
+                                <i class="note-icon fa fa-file-text-o"></i>
+                              </Link>
                             </div>
                           </div>
                         </div>
-                      
+                        <img src={value.main_article_photo} className=" articles-img" />
 
-                      <div className="flex flex-col lg:pt-5 ">
-                        <Link legacyBehavior href={{ pathname: `/international/${value.id}` }}>
-                        <p
-                          
-                          className="font-bold text-center text-red-800 hover:underline body-font lg:text-left "
-                        >
-                          {value.title}
-                        </p></Link>
-                        <p className="text-xs text-center text-gray-500 lg:text-left">{value.created_at}</p>
+                        <div className="flex flex-col lg:pt-5 ">
+                          <Link legacyBehavior href={{ pathname: `/international/${value.id}` }}>
+                            <p className="font-bold text-center text-red-800 hover:underline body-font lg:text-left ">
+                              {value.title}
+                            </p>
+                          </Link>
+                          <p className="text-xs text-center text-gray-500 lg:text-left">{value.created_at}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                </Carousel>
               </div>
             </div>
           </div>
