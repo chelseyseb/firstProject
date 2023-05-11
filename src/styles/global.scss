@@ -401,7 +401,7 @@ footer {
 
 .modal-bg {
   width: 900px;
-  height: auto;
+  height: 100vh;
   background-size: cover;
   background-image: url(/bg1.jpg);
   background-repeat: no-repeat;
@@ -418,9 +418,9 @@ footer {
   z-index: 1;
 }
 
-.modal-con{
-  padding-top: 20px;
-}
+// .modal-con{
+//   padding-top: 20px;
+// }
 //   .modal-content{
 //     background: #fff;
 //     position: fixed;
@@ -530,7 +530,6 @@ footer {
   }
   .modal-bg {
     width: auto;
-    height: 100vh;
     background-size: cover;
     background-image: url(/bg1.jpg);
     background-repeat: no-repeat;
