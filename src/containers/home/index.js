@@ -20,10 +20,10 @@ const HomeContainer = () => {
     <div className="mx-auto ">
       <div className="container body">
         <div className="grid pt-4 grid-col-1 lg:gap-30 gap-14 lg:pt-0 place-self-center lg:grid-cols-4 lg:grid-row">
-          {icons.map((icons, index) => (
-            <a href={icons.link} key={index}>
-              <div className="flex flex-col items-center justify-center h-auto pt-8 lg:flex-wrap lg:flex ">
-                <div className="w-12 h-12 p-1 text-red-800 icon-effect-2 hover:bg-red-800 hover:text-white">
+          {icons.map((icon, index) => (
+            <a href={icon.link} key={index}>
+              <div className="flex flex-col items-center justify-center h-auto pt-8 lg:flex-wrap lg:flex group">
+                <div className="w-12 h-12 p-1 text-red-800 icon-effect-2 group-hover:bg-red-800 group-hover:text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -37,12 +37,12 @@ const HomeContainer = () => {
                       fillRule="evenodd"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d={icons.d}
+                      d={icon.d}
                     />
                   </svg>
                 </div>
-                <h4 className="w-40 font-normal body-font place-self-center hover:underline">
-                  <strong>{icons.title}</strong>
+                <h4 className="w-40 font-normal body-font place-self-center group-hover:underline">
+                  <strong>{icon.title}</strong>
                 </h4>
               </div>
             </a>
@@ -56,11 +56,11 @@ const HomeContainer = () => {
         <div className="grid justify-center grid-cols-2 gap-4 item-center lg:grid-cols-5">
           <div className="flex flex-col items-center col-span-2 lg:items-start ">
             <h4>
-              <a className="font-semibold underline underline-offset-8" href="/announcements">
+              <a className="font-semibold underline body-font underline-offset-8" href="/announcements">
                 Announcements and Advisories
               </a>
             </h4>
-            <div className="overflow-y-auto text-sm leading-loose divide-y ul divide-solid">
+            <div className="overflow-y-auto leading-loose divide-y ul divide-solid">
               {announcements.map((announcement, index) => (
                 <div key="">
                   <ul>
@@ -80,7 +80,7 @@ const HomeContainer = () => {
           <div className="flex flex-col col-span-2">
             <div className="flex flex-row justify-between">
               <h4 className="items-start justify-start">
-                <a className="font-semibold underline underline-offset-8" href="/announcements">
+                <a className="font-semibold underline body-font underline-offset-8" href="/announcements">
                   Latest News from the University
                 </a>
               </h4>
@@ -147,7 +147,7 @@ const HomeContainer = () => {
           <div className="flex flex-col col-span-2 gap-1 place-self-center lg:col-span-1 lg:place-items-center ">
             {badges.map((badges, index) => (
               <a href="#" key="">
-                <img className="rounded " src={badges.src} alt="" width={200} height={150} />
+                <img className="rounded badge" src={badges.src} alt="" width={200} height={150} />
               </a>
             ))}
           </div>

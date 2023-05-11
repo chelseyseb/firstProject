@@ -168,7 +168,7 @@ export default function Navbar() {
             </span>
           </div>
 
-          <div class=" flex justify-center items-center lg:hidden">
+          <div class=" mt-6 justify-center items-center lg:hidden">
             <button
               className="flex items-center justify-center h-8 mr-6 bg-transparent border border-white w-9 top-16 right-8 "
               onClick={() => setShowMenu(!showMenu)}
@@ -187,32 +187,34 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-
-          <div className={`lg:hidden w-full  ${showMenu ? 'block' : 'hidden'}`} x-show={showMenu ? 'false' : 'true'}>
-            <div className="">
-              <ul className="w-full bg-white divide-y divide-gray-300">
-                {menuItems.map((menuItem, index) => (
-                  <li key={index} className="mt-2 active">
-                    <a href={menuItem.href} className="flex items-center justify-between px-2 py-4">
-                      <p className="items-center justify-center text-gray-600 body-font hover:text-red-800 hover:underline">
-                        {menuItem.label}
-                      </p>
-                      <svg
-                        className="w-4 h-4 text-gray-600"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                      </svg>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        </div>
+        <div
+          className={`lg:hidden w-full flex flex-col ${showMenu ? 'block' : 'hidden'}`}
+          x-show={showMenu ? 'false' : 'true'}
+        >
+          <div className="">
+            <ul className="w-full bg-white divide-y divide-gray-300">
+              {menuItems.map((menuItem, index) => (
+                <li key={index} className="mt-2 active">
+                  <a href={menuItem.href} className="flex items-center justify-between px-2 py-4">
+                    <p className="items-center justify-center text-gray-600 body-font hover:text-red-800 hover:underline">
+                      {menuItem.label}
+                    </p>
+                    <svg
+                      className="w-4 h-4 text-gray-600"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </nav>

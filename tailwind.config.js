@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         hehe: '#18D039',
         maroon: '#681919',
+        grayblack: '#111111',
         'great-blue': {
           DEFAULT: '#2A669F',
           50: '#E4F7F8',

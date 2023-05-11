@@ -104,35 +104,35 @@ export default function footer() {
               </p>
             </div>
           </div>
-          <span class="footer-p text-gray-600 sm:text-center pb-4 flex flex-row items-center justify-center">
+          <span class="footer-p text-gray-600 sm:text-center mb-6 pb-4 flex flex-row items-center justify-center">
             ©
             <a className="text-gray-600 footer-p" href="https://flowbite.com/">
               1998-2021 POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
             </a>
           </span>
         </div>
-        <div class="row bg-neutral-900 dark:bg-neutral-950 lg:flex lg:items-center lg:justify-between">
-          <div className="grid grid-cols-1 gap-10 px-4 py-6 text-center nav-con lg:grid-cols-3 lg:text-left">
+        <div class="row bg-grayblack dark:bg-grayblack lg:flex lg:items-center lg:justify-between">
+          <div className="grid grid-cols-1 gap-10 px-4 py-2 text-center nav-con lg:grid-cols-3 lg:text-left">
             <div className="flex flex-col col-span-1 gap-2 text-center lg:text-left lg:flex-row">
               <img className="w-36 h-36 place-self-center lg:place-self-start" src="govph.png" />
-              <a href="#" class="text-neutral-700 pt-4 dark:text-neutral-700 footer-p">
+              <a href="#" class="text-neutral-600 pt-4 dark:text-neutral-600 footer-p">
                 <strong>Republic of the Philippines</strong>
-                <p className="pt-2 footer-p text-neutral-700 dark:text-neutral-700">
+                <p className="pt-2 footer-p text-neutral-600 dark:text-neutral-600">
                   All content is in the public domain unless otherwise stated.
                 </p>
               </a>
             </div>
             <div className="col-span-1 ">
-              <h2 class="mb-0 footer-p font-bold text-neutral-700  dark:text-neutral-700 text-center lg:text-left">
+              <h2 class="mb-0 mt-2 footer-p font-bold text-neutral-600  dark:text-neutral-600 text-center lg:text-left">
                 About GOVPH
               </h2>
-              <p class="pt-2 text-neutral-700 dark:text-neutral-700 footer-p ">
+              <p class="pt-0 text-neutral-600 dark:text-neutral-600 footer-p ">
                 Learn more about the Philippine government, its structure, how government works and the people behind
                 it.
               </p>
-              <ul class="pt-1 text-neutral-500 dark:text-neutral-500 ">
+              <ul class=" text-neutral-500 dark:text-neutral-500 ">
                 {aboutLinks.map((link) => (
-                  <li class="mb-0" key={link.title}>
+                  <li class="mb-0 mt-0" key={link.title}>
                     <a href={link.href} class="footer-p hover:underline">
                       {link.title}
                     </a>
@@ -141,10 +141,10 @@ export default function footer() {
               </ul>
             </div>
             <div className="col-span-1">
-              <h2 class="mb-0 footer-p font-bold text-neutral-700 dark:text-neutral-700 text-center lg:text-left">
+              <h2 class="mb-0 footer-p mt-2 font-bold text-neutral-600 dark:text-neutral-600 text-center lg:text-left">
                 Government Links
               </h2>
-              <ul class="flex flex-col pt-2 lg:text-left place-content-center  text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
+              <ul class="flex flex-col pt-0 lg:text-left place-content-center  text-neutral-500 dark:text-neutral-500 font-medium text-sm ">
                 {governmentLinks.map((link) => (
                   <li class="mb-0 " key={link.name}>
                     <a href={link.url} class=" footer-p hover:underline">
