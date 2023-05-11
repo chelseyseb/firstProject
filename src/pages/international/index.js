@@ -97,11 +97,11 @@ const International = ({ articlesData }) => {
                         </div>
                       
 
-                      <div className="flex flex-col lg:pt-5 hover:underline">
+                      <div className="flex flex-col lg:pt-5 ">
                         <Link legacyBehavior href={{ pathname: `/international/${value.id}` }}>
                         <p
                           
-                          className="font-bold text-center text-red-800 body-font lg:text-left "
+                          className="font-bold text-center text-red-800 hover:underline body-font lg:text-left "
                         >
                           {value.title}
                         </p></Link>

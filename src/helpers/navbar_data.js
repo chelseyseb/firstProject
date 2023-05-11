@@ -1,3 +1,18 @@
+export const menuItems = [
+  { label: 'About PUP', href: 'index.html' },
+  { label: 'Academic', href: '#services' },
+  { label: 'Students', href: '#about' },
+  { label: 'Research', href: '#contact' },
+];
+
+export const topNav = [
+  { label: 'Home', href: '/' },
+  { label: 'Good Governance', href: '/blogs', hidden: true },
+  { label: 'Transparency', href: '/about', hidden: true },
+  { label: 'International Affairs', href: '/international', hidden: true },
+  { label: 'Bid Notices and Invitation', href: '/contact', hidden: true },
+];
+
 export const links = [
     { href: '/about/', label: 'University Profile' },
     { href: '/about/vm', label: 'Vision and Mission' },

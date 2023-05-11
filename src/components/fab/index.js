@@ -125,7 +125,7 @@ const FloatingActionButtons = () => {
                         </React.Fragment>
                       ))}
                     </div>
-                  </div><div onClick={handleClickOutside} className="static fixed inset-0 bg-black -z-10 opacity-80"></div>
+                  </div><div onClick={handleClickOutside} className="static fixed inset-0 bg-black opacity-90 backdrop-saturate-200 backdrop-blur-lg -z-10"></div>
                 </div>
               </div>
             </div>
