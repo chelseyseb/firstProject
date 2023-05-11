@@ -45,14 +45,14 @@ const FloatingActionButtons = () => {
   return (
     <>
       {ShowModal && (
-        <div className="container">
+        <div className="container overflow-y-auto">
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
           ></link>
           <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"></link>
 
-          <div onClick={handleClickOutside} className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4 overflow-y-hidden opacity-1">
+          <div onClick={handleClickOutside} className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4 opacity-1">
             <div className="relative items-center justify-center h-full modal-bg">
               <div className="relative mx-4 mb-4">
                 <div className="flex flex-col ">
